@@ -161,7 +161,6 @@ radv_physical_device_init_cache_key(struct radv_physical_device *pdev)
    key->dual_color_blend_by_location = instance->drirc.dual_color_blend_by_location;
    key->emulate_rt = !!(instance->perftest_flags & RADV_PERFTEST_EMULATE_RT);
    key->ge_wave32 = pdev->ge_wave_size == 32;
-   key->invariant_geom = !!(instance->debug_flags & RADV_DEBUG_INVARIANT_GEOM);
    key->lower_discard_to_demote = !!(instance->debug_flags & RADV_DEBUG_DISCARD_TO_DEMOTE);
    key->mesh_fast_launch_2 = pdev->mesh_fast_launch_2;
    key->no_fmask = !!(instance->debug_flags & RADV_DEBUG_NO_FMASK);
