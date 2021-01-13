@@ -1910,9 +1910,6 @@ radv_generate_graphics_pipeline_key(const struct radv_device *device, const stru
 
    key.ps.force_vrs_enabled = device->force_vrs_enabled;
 
-   if (device->instance->debug_flags & RADV_DEBUG_INVARIANT_GEOM)
-      key.invariant_geom = true;
-
    key.use_ngg = device->physical_device->use_ngg;
 
    if ((radv_is_vrs_enabled(pipeline, state) || device->force_vrs_enabled) &&
