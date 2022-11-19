@@ -122,6 +122,11 @@ copy_buffer_to_image(struct radv_cmd_buffer *cmd_buffer, struct radv_buffer *buf
     * blocks - which is the highest resolution accessible in this command.
     */
    const VkOffset3D img_offset_el = vk_image_offset_to_elements(&image->vk, region->imageOffset);
+   const VkExtent3D bufferExtent = {
+      .width = region->bufferRowLength ? region->bufferRowLength : region->imageExtent.width,
+      .height = region->bufferImageHeight ? region->bufferImageHeight : region->imageExtent.height,
+   };
+   const VkExtent3D buf_extent_el = vk_image_extent_to_elements(&image->vk, bufferExtent);
 
    /* Start creating blit rect */
    const VkExtent3D img_extent_el = vk_image_extent_to_elements(&image->vk, region->imageExtent);
@@ -154,13 +159,12 @@ copy_buffer_to_image(struct radv_cmd_buffer *cmd_buffer, struct radv_buffer *buf
       img_bsurf.format = vk_format_for_size(vk_format_get_blocksize(img_bsurf.format));
    }
 
-   const struct vk_image_buffer_layout buf_layout = vk_image_buffer_copy_layout(&image->vk, region);
    struct radv_meta_blit2d_buffer buf_bsurf = {
       .bs = img_bsurf.bs,
       .format = img_bsurf.format,
       .buffer = buffer,
       .offset = region->bufferOffset,
-      .pitch = buf_layout.row_stride_B / buf_layout.element_size_B,
+      .pitch = buf_extent_el.width,
    };
 
    if (image->vk.image_type == VK_IMAGE_TYPE_3D)
@@ -187,7 +191,7 @@ copy_buffer_to_image(struct radv_cmd_buffer *cmd_buffer, struct radv_buffer *buf
        * increment the offset directly in the image effectively
        * re-binding it to different backing memory.
        */
-      buf_bsurf.offset += buf_layout.image_stride_B;
+      buf_bsurf.offset += buf_extent_el.width * buf_extent_el.height * buf_bsurf.bs;
       img_bsurf.layer++;
       if (image->vk.image_type == VK_IMAGE_TYPE_3D)
          slice_3d++;
