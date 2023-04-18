@@ -1784,7 +1784,7 @@ emit_begin_query(struct radv_cmd_buffer *cmd_buffer, struct radv_query_pool *poo
             cmd_buffer->state.perfect_occlusion_queries_enabled = true;
          }
 
-         radv_set_db_count_control(cmd_buffer, true);
+         cmd_buffer->state.dirty |= RADV_CMD_DIRTY_OCCLUSION_QUERY;
       } else {
          if ((flags & VK_QUERY_CONTROL_PRECISE_BIT) &&
              !cmd_buffer->state.perfect_occlusion_queries_enabled) {
@@ -1794,7 +1794,7 @@ emit_begin_query(struct radv_cmd_buffer *cmd_buffer, struct radv_query_pool *poo
              */
             cmd_buffer->state.perfect_occlusion_queries_enabled = true;
 
-            radv_set_db_count_control(cmd_buffer, true);
+            cmd_buffer->state.dirty |= RADV_CMD_DIRTY_OCCLUSION_QUERY;
          }
       }
 
@@ -1934,12 +1934,12 @@ emit_end_query(struct radv_cmd_buffer *cmd_buffer, struct radv_query_pool *pool,
 
       cmd_buffer->state.active_occlusion_queries--;
       if (cmd_buffer->state.active_occlusion_queries == 0) {
-         radv_set_db_count_control(cmd_buffer, false);
-
          /* Reset the perfect occlusion queries hint now that no
           * queries are active.
           */
          cmd_buffer->state.perfect_occlusion_queries_enabled = false;
+
+         cmd_buffer->state.dirty |= RADV_CMD_DIRTY_OCCLUSION_QUERY;
       }
 
       radeon_emit(cs, PKT3(PKT3_EVENT_WRITE, 2, 0));
