@@ -3529,9 +3529,13 @@ radv_flush_occlusion_query_state(struct radv_cmd_buffer *cmd_buffer)
       }
    }
 
-   radeon_set_context_reg(cmd_buffer->cs, R_028004_DB_COUNT_CONTROL, db_count_control);
+   if (db_count_control != cmd_buffer->state.last_db_count_control) {
+      radeon_set_context_reg(cmd_buffer->cs, R_028004_DB_COUNT_CONTROL, db_count_control);
 
-   cmd_buffer->state.context_roll_without_scissor_emitted = true;
+      cmd_buffer->state.context_roll_without_scissor_emitted = true;
+
+      cmd_buffer->state.last_db_count_control = db_count_control;
+   }
 }
 
 unsigned
@@ -5617,6 +5621,7 @@ radv_BeginCommandBuffer(VkCommandBuffer commandBuffer, const VkCommandBufferBegi
    cmd_buffer->state.last_vrs_rates = -1;
    cmd_buffer->state.last_vrs_rates_sgpr_idx = -1;
    cmd_buffer->state.last_pa_sc_binner_cntl_0 = -1;
+   cmd_buffer->state.last_db_count_control = -1;
    cmd_buffer->usage_flags = pBeginInfo->flags;
 
    cmd_buffer->state.dirty |= RADV_CMD_DIRTY_DYNAMIC_ALL | RADV_CMD_DIRTY_GUARDBAND |
@@ -7215,6 +7220,8 @@ radv_CmdExecuteCommands(VkCommandBuffer commandBuffer, uint32_t commandBufferCou
                            RADV_CMD_DIRTY_NGG_QUERY | RADV_CMD_DIRTY_OCCLUSION_QUERY;
    radv_mark_descriptor_sets_dirty(primary, VK_PIPELINE_BIND_POINT_GRAPHICS);
    radv_mark_descriptor_sets_dirty(primary, VK_PIPELINE_BIND_POINT_COMPUTE);
+
+   primary->state.last_db_count_control = -1;
 }
 
 static void
