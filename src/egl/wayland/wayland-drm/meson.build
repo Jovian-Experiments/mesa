@@ -60,7 +60,7 @@ libwayland_drm = static_library(
 wp_dir = dep_wl_protocols.get_variable(pkgconfig : 'pkgdatadir', internal : 'pkgdatadir')
 wp_protos = {
   'commit-queue-v1': 'staging/commit-queue/commit-queue-v1.xml',
-  'commit-timing-v1': 'staging/commit-timing/commit-timing-v1.xml',
+  #'commit-timing-v1': 'staging/commit-timing/commit-timing-v1.xml',
   'linux-dmabuf-unstable-v1': 'unstable/linux-dmabuf/linux-dmabuf-unstable-v1.xml',
   'presentation-time': 'stable/presentation-time/presentation-time.xml',
   'tearing-control-v1': 'staging/tearing-control/tearing-control-v1.xml',
@@ -69,13 +69,13 @@ wp_files = {}
 foreach name, xml : wp_protos
   code = custom_target(
     name + '-protocol.c',
-    input : join_paths(wp_dir, xml),
+    input : wp_dir / xml,
     output : name + '-protocol.c',
     command : [prog_wl_scanner, wl_scanner_arg, '@INPUT@', '@OUTPUT@'],
   )
   header = custom_target(
     name + '-client-protocol.h',
-    input : join_paths(wp_dir, xml),
+    input : wp_dir / xml,
     output : name + '-client-protocol.h',
     command : [prog_wl_scanner, 'client-header', '@INPUT@', '@OUTPUT@'],
   )
