@@ -1150,6 +1150,28 @@ radv_DestroyQueryPool(VkDevice _device, VkQueryPool _pool, const VkAllocationCal
    radv_destroy_query_pool(device, pAllocator, pool);
 }
 
+static inline uint64_t
+radv_get_rel_timeout_for_query(VkQueryType type)
+{
+   /*
+    * Certain queries are only possible on certain types of queues
+    * so pick the TDR timeout of the highest possible type
+    * and double it to ensure GetQueryPoolResults completes in finite-time.
+    *
+    * (compute has longer TDR than gfx, other rings)
+    */
+   switch (type)
+   {
+      case VK_QUERY_TYPE_OCCLUSION:
+      case VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT:
+      case VK_QUERY_TYPE_TRANSFORM_FEEDBACK_STREAM_EXT:
+      case VK_QUERY_TYPE_MESH_PRIMITIVES_GENERATED_EXT:
+         return radv_get_tdr_timeout_for_ip(AMD_IP_GFX) * 2;
+      default:
+         return radv_get_tdr_timeout_for_ip(AMD_IP_COMPUTE) * 2;
+   }
+}
+
 VKAPI_ATTR VkResult VKAPI_CALL
 radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t firstQuery, uint32_t queryCount,
                          size_t dataSize, void *pData, VkDeviceSize stride, VkQueryResultFlags flags)
@@ -1167,6 +1189,9 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
       unsigned query = firstQuery + query_idx;
       char *src = pool->ptr + query * pool->stride;
       uint32_t available;
+      bool timed_out = false;
+      uint64_t atimeout = os_time_get_absolute_timeout(
+         radv_get_rel_timeout_for_query(pool->vk.query_type));
 
       switch (pool->vk.query_type) {
       case VK_QUERY_TYPE_TIMESTAMP:
@@ -1179,11 +1204,13 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
 
          do {
             value = p_atomic_read(src64);
-         } while (value == TIMESTAMP_NOT_READY && (flags & VK_QUERY_RESULT_WAIT_BIT));
+         } while (value == TIMESTAMP_NOT_READY && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
          available = value != TIMESTAMP_NOT_READY;
 
-         if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
+         if (timed_out)
+            result = VK_ERROR_DEVICE_LOST;
+         else if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
             result = VK_NOT_READY;
 
          if (flags & VK_QUERY_RESULT_64_BIT) {
@@ -1213,7 +1240,7 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
             do {
                start = p_atomic_read(src64 + 2 * i);
                end = p_atomic_read(src64 + 2 * i + 1);
-            } while ((!(start & (1ull << 63)) || !(end & (1ull << 63))) && (flags & VK_QUERY_RESULT_WAIT_BIT));
+            } while ((!(start & (1ull << 63)) || !(end & (1ull << 63))) && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
             if (!(start & (1ull << 63)) || !(end & (1ull << 63)))
                available = 0;
@@ -1222,7 +1249,9 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
             }
          }
 
-         if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
+         if (timed_out)
+            result = VK_ERROR_DEVICE_LOST;
+         else if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
             result = VK_NOT_READY;
 
          if (flags & VK_QUERY_RESULT_64_BIT) {
@@ -1242,9 +1271,11 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
 
          do {
             available = p_atomic_read(avail_ptr);
-         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT));
+         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
-         if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
+         if (timed_out)
+            result = VK_ERROR_DEVICE_LOST;
+         else if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
             result = VK_NOT_READY;
 
          const uint64_t *start = (uint64_t *)src;
@@ -1292,9 +1323,11 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
                if (!(p_atomic_read(src64 + j) & 0x8000000000000000UL))
                   available = 0;
             }
-         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT));
+         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
-         if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
+         if (timed_out)
+            result = VK_ERROR_DEVICE_LOST;
+         else if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
             result = VK_NOT_READY;
 
          num_primitives_written = src64[3] - src64[1];
@@ -1333,9 +1366,11 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
                 !(p_atomic_read(src64 + 2) & 0x8000000000000000UL)) {
                available = 0;
             }
-         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT));
+         } while (!available && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
-         if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
+         if (timed_out)
+            result = VK_ERROR_DEVICE_LOST;
+         else if (!available && !(flags & VK_QUERY_RESULT_PARTIAL_BIT))
             result = VK_NOT_READY;
 
          primitive_storage_needed = src64[2] - src64[0];
@@ -1367,7 +1402,7 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
             for (unsigned i = 0; i < pc_pool->num_passes; ++i)
                if (!p_atomic_read(src64 + pool->stride / 8 - i - 1))
                   avail = false;
-         } while (!avail && (flags & VK_QUERY_RESULT_WAIT_BIT));
+         } while (!avail && (flags & VK_QUERY_RESULT_WAIT_BIT) && !(timed_out = (atimeout < os_time_get_nano())));
 
          available = avail;
 
@@ -1387,6 +1422,9 @@ radv_GetQueryPoolResults(VkDevice _device, VkQueryPool queryPool, uint32_t first
          }
       }
    }
+
+   if (result == VK_ERROR_DEVICE_LOST)
+      vk_device_set_lost(&device->vk, "GetQueryPoolResults timed out");
 
    return result;
 }
