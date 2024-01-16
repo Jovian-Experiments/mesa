@@ -31,6 +31,8 @@
 #include "vk_semaphore.h"
 #include "vk_sync.h"
 
+#include "ac_debug.h"
+
 enum radeon_ctx_priority
 radv_get_queue_global_priority(const VkDeviceQueueGlobalPriorityCreateInfoKHR *pObj)
 {
