@@ -2031,7 +2031,12 @@ radv_fill_shader_info_ngg(struct radv_device *device, const struct radv_pipeline
 
       bool uses_xfb = last_vgt_stage && last_vgt_stage->nir->xfb_info;
 
-      if (!device->physical_device->use_ngg_streamout && uses_xfb) {
+      const bool disable_ngg_gs = (device->instance->debug_flags & RADV_DEBUG_NO_NGG_GS) &&
+                                  (device->physical_device->rad_info.gfx_level == GFX10 ||
+                                   device->physical_device->rad_info.gfx_level == GFX10_3) &&
+                                  stages[MESA_SHADER_GEOMETRY].nir;
+
+      if ((!device->physical_device->use_ngg_streamout && uses_xfb) || disable_ngg_gs) {
          /* GFX11+ requires NGG. */
          assert(device->physical_device->rad_info.gfx_level < GFX11);
 

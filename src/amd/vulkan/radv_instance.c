@@ -76,6 +76,7 @@ static const struct debug_control radv_debug_options[] = {{"nofastclears", RADV_
                                                           {"nogpl", RADV_DEBUG_NO_GPL},
                                                           {"videoarraypath", RADV_DEBUG_VIDEO_ARRAY_PATH},
                                                           {"nort", RADV_DEBUG_NO_RT},
+                                                          {"nongg_gs", RADV_DEBUG_NO_NGG_GS},
                                                           {NULL, 0}};
 
 const char *
