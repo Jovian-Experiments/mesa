@@ -1,0 +1,502 @@
+[
+    {
+        "sha": "b0af2b30abc487caa7ab861e393e0ae222e5b49d",
+        "description": "ci_run_n_monitor: Allow the upstream format to not exist",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "72886cbefaa40f5d61c5deee5e125b353d32852f",
+        "description": "zink: Only call reapply_color_write if EXT_color_write_enable is available",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "62fa5c8d0f059ba75d7208a0d081da811065ba1c",
+        "description": "Revert \"ci: Enable GALLIUM_DUMP_CPU=true only in the clang job\"",
+        "nominated": true,
+        "nomination_type": 2,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "c6979d97e46907ff341665200b853cbca1d5524c",
+        "notes": null
+    },
+    {
+        "sha": "6cab5559f923a025b0de3ff564145b91fd18b486",
+        "description": "radv: add support for emitting TES+GS compiled separately on GFX9+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "dd92f5f664d56732817a250d10c29fcff47d56a8",
+        "description": "radv: bind the vertex input SGPR only for relevant stages",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d64d7373f34f00e1cebc0c179c051b118a6c53b7",
+        "description": "radv: declare AC_UD_TES_STATE for separate compilation of GS on GFX9+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e15d1ed7cb3aec1ac2dd4692b37bae03acb39a2e",
+        "description": "radv: declare streamout buffers for TES+GS compiled separately on GFX9+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "83bc7e27a5778dd69e12bb64f7870487c21c246c",
+        "description": "radv: force GS stage for TES as ES compiled separately on GFX9+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b58de424f41ffcdd2c997276c7d20a659e10c272",
+        "description": "radv: fix RGP barrier reason for RP barriers inserted by the runtime",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d98ff2cc4add875f2e372bf69e45b1c6a7b8a9c6",
+        "description": "nvk: Don't clobber vb0 after repeated blits",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "e1c665013b14d63ccf4be265c5ec59914e5a5748",
+        "notes": null
+    },
+    {
+        "sha": "53ff663874012b3f5390a7fc75fa9d8b5ce7a037",
+        "description": "ci/etnaviv: update expectations",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3f7a388d487f902e3083fec829d4896b2e3519eb",
+        "description": "ci/freedreno: add fail found by new Piglit",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "1c29869c206a9844a72ab1ff307b899264376c0c",
+        "notes": null
+    },
+    {
+        "sha": "a16033b6a75593d47c2a52a6709ff3e52592df28",
+        "description": "ci: bump kernel to 6.6.16 + enable X2APIC",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bd2375399180198b777d0dc9da4eba660b5e2afb",
+        "description": "wsi/x11: Rewrite logic for how we consider minImageCount.",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "8b4259e69b6eae20feda0bc5fff84d9f83198a7d",
+        "description": "wsi/x11: Disable vk_xwayland_wait_ready by default on most drivers.",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "fc8a83c96dfa25f0f1fe841c98ed48d668cfde03",
+        "description": "gallivm/ssbo: mask offset with exec_mask instead of building the 'if'",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9ff3bec4842489dcbf6e0197e99e8b1d2408c46d",
+        "description": "gallivm/ssbo: replace run time loop by compile time loop",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bab4399970cc392c49f54076245a6262e1aa5907",
+        "description": "mesa: add gl_vertex_array_object::NonIdentityBufferAttribMapping",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "10f08c273385f9be9bfd2d7df18d01685ce8029d",
+        "description": "mesa: inline _mesa_set_vao_immutable",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9aa205668bcbf701f8f694551c284cd8e4cc17a3",
+        "description": "mesa: inline {Create,Draw}GalliumVertexState callbacks",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "8618062b3cacdbab8fbb0ddb8afff3a3a9ba2e4e",
+        "description": "st/mesa: constify the pipe_draw_info parameter and remove obsolete comments",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bf3012794164eeecc6b07acc1a2ab837c627c5d7",
+        "description": "crocus: Call blorp_finish() when destroying context",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "083ef7e3382c5267c62710cb24eac899d5a58d7f",
+        "description": "iris: Call blorp_finish() when destroying context",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d699600da1db483b142d71e777b3ed1bc6576a4a",
+        "description": "anv: reduce cache flushing for indirect commands on Gfx12.5+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "36f23bf96d66acd5bd8ba22a8fdce5b99857ce71",
+        "description": "aco: print exec/vcc_lo/hi for single dword access",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "684014ff1213ff59fd4747fa760de8159a42472e",
+        "description": "aco: print permlane16 bc/fi",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f469fda44ca867eb115a47f7aa106897e67ff292",
+        "description": "aco: don't print hi() for permlane opsel",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b59f5f9c859d388cf8e67c6521614abd6709e208",
+        "description": "aco: print neg prettier for packed math",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "767eb15ddcaf7fe5aa1917f423659a5ad072df33",
+        "description": "aco/print_ir: don't use alloca for input modifiers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "cd6d9c5918feabe18a58f6b1096a55c1970d0883",
+        "description": "aco: don't remove branches that skip v_writelane_b32",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2c4980716f7e04c70c515305113aa95cdf5c6331",
+        "description": "aco: add packed fma dpp note to README-ISA",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e927c5004f9f6305e2269b1b1f0950bcba916ce7",
+        "description": "aco/gfx11+: disable v_pk_fmac_f16_dpp",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a52c1994aa11febf0c54d63e46798b3204c180a0",
+        "description": "intel/dev: generate declarations for struct intel_device_info",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "13c719452577a4950c85fe7caa824187238fbf67",
+        "description": "intel/dev: specify struct intel_device_info type details in python",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c40dacd4a8d339dee509bde830993c49add02c1d",
+        "description": "util: add parson for handling json files",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "fb7240bef96b9faef6eba3a35205567dad1ec343",
+        "description": "hasvk: add missing linker arguments",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "78578a6ddb4a7faee3b1e20d6ba1ce34e9dd58ba",
+        "notes": null
+    },
+    {
+        "sha": "bde9a16ce87af5b9d25cd844b08b660df3b6f4ff",
+        "description": "iris: Switch to truly asynchronous VM binding in Xe KMD",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3579413aed4fbccedc8d05063ef365bfea2deb35",
+        "description": "anv: Switch to truly asynchronous VM binding in Xe KMD",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "63abbb24adf0da9c3791e79d72fc26ca7e2585e5",
+        "description": "iris: Start to use intel_bind_timeline",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f23395e2b900d3572e014e1ffa9c7c737656befd",
+        "description": "anv: Start to use intel_bind_timeline",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e905bfe81bd404bca00dcaa0f6b9fc56d46cfe95",
+        "description": "intel/common: Add functions to handle async vm bind",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "11465e4b3af895ba2377d8a39e9ab3edeb0b01a3",
+        "description": "mesa-overlay: defer listening to socket until first frame",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9beb9081fc4c878b41ba25b0f486cb01948c88fc",
+        "description": "ci_run_n_monitor: print the target regex before adding the X/N bit",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "7154c1eb77ea644dfc02d69c9bd68eda0a31d4c1",
+        "description": "ci_run_n_monitor: implicitly include `parallel:` jobs",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f40d32770a5f91b95450f2944c608fb0303da27c",
+        "description": "targets/va: override LIBVA_DRIVERS_PATH in devenv",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9c006d5dceac9bf885554d92f8cef8c0ab0858a1",
+        "description": "nir/passthrough_gs: flesh out gs_in_prim",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3c3f7cb74729a2ac205d78b2b05410b0248327a4",
+        "description": "compiler,gallium: move u_decomposed_prim to common",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "ac426e1164ddd6f659513591f2658585e632ca62",
+        "description": "winsys/amdgpu: remove unused amdgpu_fence_is_syncobj",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f7facda322fc82d892a31919a66c55ab0bb73c63",
+        "description": "winsys/amdgpu: unmap user fence BO before destroy",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6c3a294eef51d6054ed899aa2b61628f9cd09656",
+        "description": "radv: don't remove the blit queue from the device queues",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    }
+]
