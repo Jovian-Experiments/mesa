@@ -1,5 +1,1835 @@
 [
     {
+        "sha": "e136a0629dfe7ecd7124934d3078351ba50617a9",
+        "description": "radv/gfx11+: add rtwave32 perftest option",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "90eae30bcb84d54dc871ddbb8355f729cf8fa900",
+        "description": "rusticl/mem: move pipe_image_host_access into Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9ce9ddc5e8cdf985faa80795ca192ca1230c571d",
+        "description": "rusticl/mem: reorganize MemBase::from_gl a little",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b834d41d4bfb515e7701cd81c5c678747dc8a63b",
+        "description": "rusticl/mem: move Buffer and Image specific fields into the subtypes",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "cf73ac8096d343a0b0cfeb5a46f7642d6e65d74c",
+        "description": "rusticl/mem: move tx_raw_async methods into Buffer and Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f9b05dfd77094ff3067061f5e5d13ab6048d3681",
+        "description": "rusticl/mem: move MemBase::map into the users",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d3c389208801babce390711703f239f36b84eed8",
+        "description": "rusticl/mem: reorganize Image::map",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "97680ca861300518fed75cbd8e305ee759a008b0",
+        "description": "rusticl/mem: move comment describing how mapping works",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a9a928cbf96ef089f1627283aaf6463116dc5c63",
+        "description": "rusticl/mem: remove get_res",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "687dea4fde17062c7b51d1c5bea9e330568ba262",
+        "description": "rusticl/mem: move tx into Buffer",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d18333889e2e995214a784e0438bc5ace29ed2b6",
+        "description": "rusticl/mem: move is_parent_buffer into Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bfa342e16e092d94840f372fe00cb2e7d4b78a6f",
+        "description": "rusticl/image: call tx on the parent buffer directly",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6a15d5baeea4f56030b559cd1239138606d406ee",
+        "description": "rusticl/mem: fold tx_raw into tx",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "790d00d3e19b85b4145f8309946984b11a8e7000",
+        "description": "rusticl/mem: move tx_image into Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e39b6288f608557153ce6a9894ebda1b435f6377",
+        "description": "rusticl/mem: get rid of pixel_size",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2db23aa2076a9cb6445983f82a28bd6fd3ff51fd",
+        "description": "rusticl/mem: split Image::copy_to into Buffer and Image versions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c0c6eca0951f0ab179537fc87fa76ee4f8cb056c",
+        "description": "rusticl/mem: split Buffer::copy_to into Buffer and Image versions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "28bff68d9803ff9ff111097015a4adccfc9f6ad1",
+        "description": "rusticl/mem: split copy_to into Buffer and Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "dd4096e7fde35ce3f80f0ce7d17edb194d33fba7",
+        "description": "rusticl/mem: move copy_to_rect into Buffer",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e048d8c79687fe4d48a532f61697a42db94c2a4a",
+        "description": "rusticl/mem: split write_from_user_rect into buffer and image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "efc803175aa436f9291f0bfdbcce3c49c5678ba6",
+        "description": "rusticl/mem: split read_to_user_rect into Buffer and Image versions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "fdfde8a189810f9389c7ef7a4ca2d0b09a00f87c",
+        "description": "rusticl/mem: move copy and write buffer impls into Buffer",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "aaa05ffc1d7adea6275659f1db8b73cc77f9c642",
+        "description": "rusticl/mem: split unmap into Buffer and Image versions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a840a75d17b9cef45aa96e2a7ef048073f196e27",
+        "description": "rusticl/mem: move shadow sync methods into concrete types",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "553a9e38bd13318c36c52a279041f0a77817b19d",
+        "description": "rusticl/mem: move map methods into concrete types",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "219d8e0dae56756b2d9c0ebbbb1797f3fb867572",
+        "description": "core/memory: drop Arc for &Arc<Queue> function parameters",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5a1089b8113e319ce21d0079a6f9fd51c8b761c3",
+        "description": "rusticl/mem: move fill methods into concrete types",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "58c042f43913adddfe0470615748a89e8c4c6487",
+        "description": "rusticl/mem: use pattern matching in is_parent_buffer",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d705307a72a89aea3c3c5cc9716f046f7ca2289f",
+        "description": "rusticl/mem: split into Buffer and Image",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "0125e865a124077e57f318ad08e00eb5166a3b28",
+        "description": "rusticl/icd: actually allow dispatching CL types",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "aa5b0e7883ee70fc3749400cd1ce6626bf5761a0",
+        "description": "rusticl/device: get rid of pointless Arc overhead",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "7f77f91929c9cdaddde78a59e532657d024d7731",
+        "description": "rusticl/icd: split Arc part out of CLObject into new trait",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "4807573ba7a9481396fdc183e8856eac2ea0a82d",
+        "description": "rusticl/icd: move get_arc() and rename it",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3be4f60f978926d7ac7d0e76c6404e3772a82c5b",
+        "description": "rusticl/event: drop from_cl_arr and use arcs_from_arr",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "57e5d377da18f19420b7528c67429cbccf0ebb59",
+        "description": "rusticl/icd: move from_arc() and rename it",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "51afd7a00cf9d174727fcba3a9c87d704780eae4",
+        "description": "rusticl/device: deduplicate devices with sorting",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e63e21ac74e751a9f8f3c50e1fd356380ee34082",
+        "description": "rusticl/icd: move get_ref()",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "13241264f19288c5e0abcfab504041f32bb12af3",
+        "description": "rusticl/icd: fold leak_ref into its only consumer",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "4ca11d5f067fe8c9c6625d6afcddb24d90ef0a7b",
+        "description": "rusticl/icd: move get_arc_vec_from_arr and rename it",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9b5bcbb60fd25620efd5fe72b9c8d00ef8707dde",
+        "description": "rusticl/icd: move retain() and release()",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "45b9fdb4e5178d2d84fb04223be69241d17c6115",
+        "description": "rusticl/icd: move refcnt() and get rid of needless atomic ops",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "7564b817497f44b980eecdc7d6bdd264665a1c63",
+        "description": "rusticl/icd: move get_ref_vec_from_arr into the Rusticl type",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "46227bf44c1beecd5c77d54e80f6aa5b1c773516",
+        "description": "rusticl/api: allow CLObjectBase to be placed anywhere",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6d8b0a53c6959cf7af9f57c22f42faf84b444c10",
+        "description": "rusticl/util: support nested structs in offset_of!",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "0287aa4b34bb8e549c11049ce696ee4d5721358d",
+        "description": "rust/api: add RustTypes enum",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e54638ddf5e051daa72ea4606d4280dfc0791713",
+        "description": "anv: fix buffer marker cache flush issues on MTL",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "c8e122a73805924811df97071406c59ab6aee002",
+        "notes": null
+    },
+    {
+        "sha": "88d0c6c26aa9f00547a8bd2dda36176cb84adfb6",
+        "description": "meson: Limit intel_vk_rt to x86_64",
+        "nominated": false,
+        "nomination_type": 1,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": "a512c2a8b572c5da360873320dbbd343c6223cd6",
+        "notes": null
+    },
+    {
+        "sha": "34078b67ed2fc03bff2c7069d7ec00d72d96461a",
+        "description": "anv: don't allocate aux padded BOs with host pointers",
+        "nominated": false,
+        "nomination_type": 1,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": "646a7c864d3a4cf440164f5e199d6e339420a73c",
+        "notes": null
+    },
+    {
+        "sha": "feb7cf82dc880176f9e11e686e6870753177dc8c",
+        "description": "anv: remove redundant asserts",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "cc7934a89bd15099f7fd30fab8c8c27a9d9fc1ac",
+        "description": "broadcom/compiler: fix lane selection for subgroups in fragment shaders",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2143da6d5aeff02d3a6308f97aacf6c8b3197c3b",
+        "description": "intel/dev: improve meson invocation for intel_device_info gen",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f95b87a3dcdf86ff103d9c69c0de17343601431b",
+        "description": "intel/tools: load json device info in drm_shim",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "56da473b6f63bffa60e61f5900f3c70231a893de",
+        "description": "intel/dev/tools: add json as an output format for intel_dev_info",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "1f725a222ad9b4b249f480811ed2fc1e9eabc9f0",
+        "description": "intel/dev: implement json serialization for intel_device_info",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d124542b551ad05f24ec4fad8b87faadca89e659",
+        "description": "anv: Override VendorID for Hitman 3",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e56f81031677e00e29faec893b5a10e499488929",
+        "description": "intel/tools: add intel device meson dependencies",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "161a90abbdb7084c3691c70b878fdd852340da54",
+        "description": "dzn: Add a driconf option to disable dzn for specific apps and use it for RDR2",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "660c7fe6a79ae851b82906660a5f5d454a65caab",
+        "description": "dzn: Fix tessellation shader insertion into PSO desc",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d5131e5f86677b68dca614ad1010d670e6ec8178",
+        "description": "dzn: Simultaneous-access is mutually exclusive with MSAA",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "32c6caffd71c5b8a92fbdb2268c6d528158a1f93",
+        "description": "spirv2dxil: Trivial fixes for tessellation shaders",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a3c45306e25e047a5e74ccc24182bc9e59aae90f",
+        "description": "spirv2dxil: Remove dead branches early during shader compilation",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a8758afabd5fd61b55238c5245d92fc85775d698",
+        "description": "microsoft/compiler: Relax assert for SPIR-V barriers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b6b980a904838260540541dcbb34c72de8437b67",
+        "description": "mesa/main: work around chrome/firefox bug",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d0cc0e74dd9b2aa116f7672388257a0facf6f4bd",
+        "description": "mesa/main: mark GL_BGRA8_EXT as color-renderable",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2b2a6a238ed77d003cbf38c43a2629b8f2a37380",
+        "description": "mesa/main: mark GL_BGRA as color-renderable",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a7e8dc6835266bfdd0c17f70acec5585bd7a74d3",
+        "description": "mesa/main: fix _mesa_base_tex_format for BGRA",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "4de62731f4db56360026cbb6a3b8566f86f22466",
+        "notes": null
+    },
+    {
+        "sha": "b7e39657f67d9cfb932876012da1a8d05d4c18bd",
+        "description": "zink: only add arrays to indirect non-tcs variables",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9e2c7314f2867de6f43e2add992590cfb92ccddd",
+        "description": "nir/lower_io: fix handling for compact arrays with indirect derefs",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a512c2a8b572c5da360873320dbbd343c6223cd6",
+        "description": "meson: enforce build of intel-clc with anv/iris",
+        "nominated": false,
+        "nomination_type": 1,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": "b52e25d3a8eee702ff5d21e4cdb9a4dc0736282a",
+        "notes": null
+    },
+    {
+        "sha": "d0fba810b3d334191ead4f16f5ba786250a70c32",
+        "description": "intel: Fix intel_get_mesh_urb_config()",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "32c1e45718241f5a768ada47bc1f993a1c3131b5",
+        "description": "radv: fix emitting VS prologs for merged shaders compiled separately on GFX10+",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6762307698416e41dbebb686ab94ad0a77f0f44a",
+        "description": "radv: cleanup radv_shader_combine_cfg_vs_tcs()",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6121497228d7388a5711c9458945b5903c401c7e",
+        "description": "aco/gfx11+: limit hard clauses to 32 instructions",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3f7b3449309b7422d99d982b189473b4daed775a",
+        "description": "rusticl/mem: support GL_TEXTURE_BUFFER",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "2645003bdc527b5dc046366fce5e65b44b27334f",
+        "notes": null
+    },
+    {
+        "sha": "117291332c6f30c7759dcd3f70459a6d8e2b153e",
+        "description": "rusticl/mem: properly handle buffers",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "2645003bdc527b5dc046366fce5e65b44b27334f",
+        "notes": null
+    },
+    {
+        "sha": "727cddd338aceb48915725fefec3fcc563e956e1",
+        "description": "nir/lower_cl_images: record image_buffers and msaa_images",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "29a6beb36e7d41c9955998ab8c90061f27d373dc",
+        "description": "anv: revert cache flushing changes for indirect commands",
+        "nominated": false,
+        "nomination_type": 2,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": "d699600da1db483b142d71e777b3ed1bc6576a4a",
+        "notes": null
+    },
+    {
+        "sha": "0c05bdf1c105419f69b5ebad48263fed04bd3c82",
+        "description": "radv/ci: enable RADV_PERFTEST=shader_object on VEGA10",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bead3f2ec3d208bfc525598a2629b26c84b75cbd",
+        "description": "radv: allow RADV_PERFTEST=shader_object on GFX9/VEGA10",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "afab80bdb69928a6a5724a813b0903d0fdc62f8f",
+        "description": "radv,driconf: Enable active AS leaf workaround for Jedi Survivor",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "14c85196fc8a51f7040c0b21d89d2d11c7ad48f5",
+        "description": "mesa: use util_idalloc_alloc_range for _mesa_HashFindFreeKeyBlock",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "ec65dfaabd66f74e2a17d5f58a8fe8f88880b645",
+        "description": "mesa: fix incorrect _mesa_HashInsertLocked parameter in _mesa_EndList",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "72a38b37920ef7bb37aec3aa842f655c042967f8",
+        "description": "st/mesa: remove !obj checking in _mesa_get_bufferobj_reference when it's useless",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9747cf2c8f469568da378731f70ba35e2c61c6ff",
+        "description": "st/mesa: merge 3 unlikely blocks in _mesa_get_bufferobj_reference",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bfe6d389a0657d75bc97cca2bce451a4a3279f2d",
+        "description": "mesa: remove _mesa_HashTable::InDeleteAll",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "8ca750a8b640d78ed748c02d6039b7dc0a209ad1",
+        "description": "mesa: fold _mesa_HashDeleteAll into _mesa_DeleteHashTable",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d33bffd7088332729fd4100c47b38436db1112f8",
+        "description": "mesa: re-format main/hash.h, move inlines to the end, some code to main/hash.c",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "cf2692fa24ec38c9039c7718225b13734fe8a7c4",
+        "description": "mesa: clean up unnecessary _mesa_HashTable locked/unlocked wrappers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "70b65fe09bca2f3aa57c288dc666e07bf4c112d0",
+        "description": "mesa: remove unused _mesa_HashTable code",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "716e483cfb4cae812afd9865cb4b94025c0632a4",
+        "description": "util/idalloc: make deleting invalid IDs a no-op",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5438b1910464e4b17fe0248a96a6ed98f0280a20",
+        "description": "iris: enable generated indirect draws",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d754ed5330bc94868547ff5b41c8992e8266b4d0",
+        "description": "iris: add an option for not emit draw parameters",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "96439b7dfbc0b3e492cfc966ed8f4c5fba5c935e",
+        "description": "iris: factor out index buffer emission",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "1caf42d92e7ae832fe40c851cc3e64388f2a3bce",
+        "description": "iris: Implement INTEL_DEBUG=heaps",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "725817f429717516101b68b24dd07035630eaf1c",
+        "description": "iris: make URB programming available outside iris_state.c",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "84e1f8ae702c29e1461aa24404381fbb142ef2c4",
+        "description": "iris: make KSP helper available outside iris_state.c",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bde1c7665573122ed7cf83e238f2130a7d8bb24d",
+        "description": "iris: make binding table shifting values available outside iris_state.c",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "f192ea630a435248a104f968b9dab89903b2f350",
+        "description": "intel/shaders: enable gfx8 support",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "76c3d97c841bdc39701e8f23e0eaa0b43c07ec50",
+        "description": "intel/shaders: add iris variant of indirect draws generation shader",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b52e25d3a8eee702ff5d21e4cdb9a4dc0736282a",
+        "description": "anv: rewrite internal shaders using OpenCL",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "da391650f534cc78c4907010010a475a72e49422",
+        "description": "ci: build a host version of mesa for cross builds",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "1e31fd5f4268b134b26cd9d82d76d406332a3d8d",
+        "description": "meson: add option to install intel-clc",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "a26c7b0b036499a2db23b8a12afbc0291070e406",
+        "description": "intel/ds: new tracepoints for generated commands",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "472f49ef43ab7caaff5b0caf9a84208180b0557c",
+        "description": "genxml: remove NDEBUG_UNUSED",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "41b2ed65e2532fd3be9ee7b74c74401169e81acd",
+        "description": "genxml: generate opencl packing headers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2a0328ba8bcb5151dcbd4e7f44b5fb4890828205",
+        "description": "genxml: enable opencl code generation",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e6b5196079c264fe694dafcf88816e3d676e5fbc",
+        "description": "intel-clc: print text input",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "4fd7495c693818e0823b100df0e0607e448a29fe",
+        "description": "intel/clc: add ability to output NIR",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2bae1b6b6676cd0518a9f0e90b3819ee4c00a586",
+        "description": "intel-clc: move ISA generation to its own function",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "2a1ff08376d84b111873214297518abed3cf75b2",
+        "description": "intel/compiler: make default NIR compiler options visible",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "012489e55ce3c88615c5fb2667e10e9cfd7b7edb",
+        "description": "meson: add a new option to enable intel-clc without building RT shaders",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c53a4711cb77fdf19b93797106b2ddf846c32d37",
+        "description": "anv: fix incorrect flushing on shader query copy",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "b3b12c2c27fdd42668c041dd5428603d6cee4eb4",
+        "notes": null
+    },
+    {
+        "sha": "2437556d83bc588efb97b81468695879ff23529e",
+        "description": "intel/fs: rerun divergence prior to lowering non-uniform interpolate at sample",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "74a40cc4b6ed9440a0820c6f4a9cee296a8e191a",
+        "notes": null
+    },
+    {
+        "sha": "8f5a7f57df20dacd3c3123639382147e651a8ad8",
+        "description": "intel/fs: indent lowering code to make it more readable",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c517088cf10e33c74f787f8cc3aa6839a45d1af8",
+        "description": "anv: factor out post submit queue debug code",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "67f3fa896e7df0e115d1f6cafb12805c88c0d093",
+        "description": "intel/dev: fix missing dependency on generated packing heaers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "04d26ceb0a87ca9e05a00405e2544f256e8e046c",
+        "description": "llvmpipe: Set \"+64bit\" for X86_64",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "f92cadccc65128fdaa54e59ba40dcf75e90a25dd",
+        "notes": null
+    },
+    {
+        "sha": "5dd5d4c4b52a4dd276e3a532eaaa1f59dadf638a",
+        "description": "tu: Exclude more a7xx regs from stomping",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e4631bee61cb42c66e4b2844023f9858dffb8975",
+        "description": "freedreno/devices: Update magic regs for a7xx",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "eb1e71e707685c221baf9eb3a43c471781dd72a5",
+        "description": "freedreno,tu: Move varying interp and varying repl modes to xml",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "78c843230c10c93a4319bcbd0ebd096d98906900",
+        "description": "tu/a750: Consider vertex attr buff in gmem allocation",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5266815ca9b413c8d2e27704570f3cba5235e1a9",
+        "description": "tu/a7xx: Update CCU layout logic for A7XX",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "98d6d93a8278fb1b45c9a2fe308482fcb7eccd10",
+        "description": "turnip,ir3/a750: Implement inline uniforms via ldg.k",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6a744ddebc269b06bd65cb709d3c788378f2f2ae",
+        "description": "ir3: Initial support for pushing globals with ldg.k",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "513fa1873cf5d00f520c058abd5f85b318af9a99",
+        "description": "ir3/a7xx: Fix load_global_ir3 with immediate offset",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "45c71803f9dc9123145431145124c1b4dab0cf93",
+        "description": "tu: Add more info to ldg inline uniform path",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b87b8fdf73026022aa9cb8bbe596c0e9d7ce9119",
+        "description": "tu: Use SS6_INDIRECT for VS params",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "76e417ca593866080731da59c479a99542e3a529",
+        "description": "turnip,ir3/a750: Implement consts loading via preamble",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "7429ca3115067cf6fe54552e445f2c60832d8fb4",
+        "description": "tu: Use SS6_INDIRECT consts upload path for 3d blits",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "30597970a5706c3dd8d4a9f43b9b173c6fff0a59",
+        "description": "tu/a7xx: Do not preload shaders, HW does it by default",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "ac75edb8c4ea4dbbe220ed00b9673fe230b084b7",
+        "description": "tu/a7xx: Correctly set A7XX_HLSQ_UNKNOWN_A9AE.SYSVAL_REGS_COUNT",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bc6b847017ac7f9b4ed764fdc5c0a5aabbdf3f2a",
+        "description": "ir3: Add ldg.k instruction",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "ad52f92cb8eb53b945314295bb13e1a1e2406ab2",
+        "description": "tu: Define and set to zero all SP_*_VGPR_CONFIG regs",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c166c5100b6251f83f9b881b415b8bc91a402615",
+        "description": "tu/a750: Basic a750 support",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "cdadead230bc1b26f9ca2c80c37d288bdabea4de",
+        "description": "tu/a7xx: Make A7XX_RB_UNKNOWN_8E06 value configurable per-gen",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "98b62434bd99ab962d4a7c3d23ec142154ee5cf7",
+        "description": "intel/compiler: Lower texture operation to combine LOD and AI",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c984d6e2fcfb960246bdb98692fcc80b065bcdf5",
+        "description": "nir: Drop intel specific lowering code",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "15129c763475c1d61ed9f10cfd5e51b59b56c8fc",
+        "description": "intel/compiler: Use nir_tex_src_backend1 to pack LOD and array index",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "73a3257968b6f746f0dc859dd3af2d1410800a28",
+        "description": "intel/compiler: Add texture operation lowering pass",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "646a7c864d3a4cf440164f5e199d6e339420a73c",
+        "description": "anv: re-introduce BO CCS allocations",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "bd197c6bcffeb1b940cb2b67656f6009359f18e0",
+        "description": "intel/aux_map: add helper to compute offset in aux data",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c0889a127b12ebefc90f42f9494c9696e0aaa270",
+        "description": "intel/aux_map: add BSpec reference",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "da6484a8a4720779b42489068cdb1f41872a931f",
+        "description": "anv: use address helper to compute address u64 value",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "7763e75eead2c99f58bf16845dc4ceed93de1cfc",
+        "description": "anv: move ALLOC_HOST_CACHED_COHERENT as define",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3f64ec141eef9a751b27ceece67803829e40da13",
+        "description": "isl: add a no-aux-align usage flag",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "44515bb92cddfbf6f0e95abc60ad55f0f4de4599",
+        "description": "isl: printout sparse usage",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "926d9f1cef12189418258d4812d42193344f4128",
+        "description": "radv: support minmax filter for more formats",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "05cf04ac97f17b583ffaead91e35e10e86c49926",
+        "description": "nvk: Convert shader addresses to offsets in nvk_shader.c",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "e162c2e78e8681865b3ae249de3e9dc9a1a18429",
+        "notes": null
+    },
+    {
+        "sha": "afd42f5951f7d3d919c7705ce3345def49a3bcce",
+        "description": "nvk/heap: Rework over-allocation",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "e162c2e78e8681865b3ae249de3e9dc9a1a18429",
+        "notes": null
+    },
+    {
+        "sha": "728256e99455a35bc04c5acc462604840d5bb21c",
+        "description": "nvk/heap: Use nvk_heap_bo::addr instead of bo->offset",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "e162c2e78e8681865b3ae249de3e9dc9a1a18429",
+        "notes": null
+    },
+    {
+        "sha": "83521dd486478c440c7c3dfb7f11ec5c46e30156",
+        "description": "nvk: Don't set CONSTANT_BUFFER_SELECTOR with a zero size",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "55413e33dc0d19237a93f5f9cf882f3e1b2f6004",
+        "notes": null
+    },
+    {
+        "sha": "28ad2f488a0f23b458114fe26f5201a5565c2775",
+        "description": "anv: Store host-located copy of NULL surface state for faster memcpy",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "48a0a3112f212a155fe6a1bc259a138b1db47352",
+        "description": "freedreno: Add a750 clock gating control related registers",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "097e543c0a061382e07063705225304eefff6d1f",
+        "description": "Revert \"zink: always force flushes when originating from api frontend\"",
+        "nominated": true,
+        "nomination_type": 2,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "03f049f49730b8b1268f2975fc34ac2b1f9a4ef9",
+        "notes": null
+    },
+    {
+        "sha": "aed5e4e1f2bcbad5a63d483cf97bf7c30ca9cccc",
+        "description": "zink: Always set mfence->submit_count to the fence submit_count",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "8d44a115080645c210e055fa410fb18accf510aa",
+        "description": "radeonsi/vcn: Don't reinitialize encode session on bitrate/fps change",
+        "nominated": true,
+        "nomination_type": 0,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e0b4dfbbda97d98f4065c9cf536032936401c8d0",
+        "description": "anv: don't unmap AUX ranges at BO delete",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "7b87e1afbcd880dd25771a42d65585da44faa444",
+        "notes": null
+    },
+    {
+        "sha": "fb62bffcdaff25e8ca6b4a9a2c7ce02e6b5bb1ed",
+        "description": "radv: Wire up ac_gather_context_rolls",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "ba6d6e5ee116929d82e51e1fcf3027a64015dcef",
+        "description": "amd/common: Use the correct register table for GFX10_3",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "1098afd7fbe11a6fd40d4ade2431ffa7017ab097",
+        "description": "gallium: add PIPE_CAP_FP16 for AMD_gpu_shader_half_float",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6fbf3367886a773f513244022543581996454bdc",
+        "description": "compiler/types: Add a contains_32bit helper",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5f1f6d74968df3d2f059a8b8812054d1aa9124db",
+        "description": "glsl: add half float AMD_shader_trinary_minmax functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d619c16c3f95dda8adfd17ab84b3e752b9c969f0",
+        "description": "glsl: add half float derivative functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "14de2eff89c9722b3f4eafcc2b001a13c64c7c12",
+        "description": "glsl: add half float interpolation functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9dc5eec02c9ad2b87ee996e888926c28feda4e3a",
+        "description": "glsl: allow half float varyings",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3dc67c2c7e1e49266fd46519823d7533d774eaa6",
+        "description": "glsl: add half float vector relational functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "e7f1be1ceb28ac6088cfe91e1128b80a1c096499",
+        "description": "glsl: add half float matrix functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "99a80ac93067028838091bf8fbd26b3a2533485d",
+        "description": "glsl: add half float geometric functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "6a170051a98b2aa743556337a3551c50cf4b7013",
+        "description": "glsl: add support for half float packing functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "c386d5691516e8b56bf023cce105e2b38dce6fec",
+        "description": "glsl: add half float support for common functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "eea1c1fa7b58d32f3b503e65005c0e2540345958",
+        "description": "glsl: add f2f16() helper to ir_builder",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "94865a45f8832edd782115043d03d69d840fdf9d",
+        "description": "glsl: add half float exponential functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "829c99def12d1df90aacaf2db47946d512b279fc",
+        "description": "glsl: add half float angle and trigonometry functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "3ff22ee4aeea9a74f821146d0f6ddfc254341dba",
+        "description": "glsl: add some new helpers for half float builtin functions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9dc651a13f1d74fa6d85af432cb714ba0557e757",
+        "description": "glsl: skip conversion of half float back to float for GL queries",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "66633dbbd059cd0f8f320eb11ba2fdeabea8cb24",
+        "description": "glsl: add ubo packing support for half floats",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5803417c6775c40bdebc1f8bf41965c6219af123",
+        "description": "glsl: add implicit half float conversions",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b83477973f3cbca6c3b40f6ac5b98fe786d53449",
+        "description": "glsl: add glsl_type_is_float_16() helper",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "5eea4c42f5db7ba63d116838f0fb591a2045c580",
+        "description": "glsl: update assert to allow for half float support",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "b2a7717717bd36c8412dc4a2f719c21fa479ee18",
+        "description": "glsl: add explicit half float conversion support",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "edbe1b5bb4a2551323fd6d0af39c0c6aa797cd7c",
+        "description": "glsl: add half float support to the parser",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "72fb49516e0022b174cb581f46f380f6f13d6c6e",
+        "description": "glsl: add basic params for AMD_gpu_shader_half_float extension",
+        "nominated": false,
+        "nomination_type": 3,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "d8e4a4e44b3e3bb493535f87c14123e4dbbe1209",
+        "description": "docs: fix doc build 'intel/dev/intel_device_info_gen.h' file not found",
+        "nominated": false,
+        "nomination_type": 1,
+        "resolution": 4,
+        "main_sha": null,
+        "because_sha": "a52c1994aa11febf0c54d63e46798b3204c180a0",
+        "notes": null
+    },
+    {
         "sha": "b0af2b30abc487caa7ab861e393e0ae222e5b49d",
         "description": "ci_run_n_monitor: Allow the upstream format to not exist",
         "nominated": false,
