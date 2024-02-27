@@ -1022,6 +1022,7 @@ struct radv_device_cache_key {
    uint32_t mesh_fast_launch_2 : 1;
    uint32_t mesh_shader_queries : 1;
    uint32_t no_fmask : 1;
+   uint32_t no_ngg_gs : 1;
    uint32_t no_rt : 1;
    uint32_t primitives_generated_query : 1;
    uint32_t ps_wave32 : 1;

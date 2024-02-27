@@ -667,6 +667,7 @@ radv_device_init_cache_key(struct radv_device *device)
    key->mesh_fast_launch_2 = device->mesh_fast_launch_2;
    key->mesh_shader_queries = device->vk.enabled_features.meshShaderQueries;
    key->no_fmask = !!(device->instance->debug_flags & RADV_DEBUG_NO_FMASK);
+   key->no_ngg_gs = !!(device->instance->debug_flags & RADV_DEBUG_NO_NGG_GS);
    key->no_rt = !!(device->instance->debug_flags & RADV_DEBUG_NO_RT);
    key->primitives_generated_query = radv_uses_primitives_generated_query(device);
    key->ps_wave32 = device->physical_device->ps_wave_size == 32;
