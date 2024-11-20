@@ -1,5 +1,35 @@
 [
     {
+        "sha": "08c9dca8dbff02e28ad8a008977188f79a43f796",
+        "description": "radv: fix skipping on-disk shaders cache when not useful",
+        "nominated": true,
+        "nomination_type": 1,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": null,
+        "notes": null
+    },
+    {
+        "sha": "9c1de5c6b3a690ccba88cc308773aebe5e89ac51",
+        "description": "panvk: set correct max extents for images",
+        "nominated": true,
+        "nomination_type": 2,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "d5ed77800e04fee670dbc1091d98490e4fa470ce",
+        "notes": null
+    },
+    {
+        "sha": "00b25ec7693e81c23619369551b0d1fd0cb9c440",
+        "description": "panfrost: use 64-bits for layout calculations",
+        "nominated": true,
+        "nomination_type": 2,
+        "resolution": 0,
+        "main_sha": null,
+        "because_sha": "d5ed77800e04fee670dbc1091d98490e4fa470ce",
+        "notes": null
+    },
+    {
         "sha": "92446a2dccc35e55453b96a91981587c41c486c4",
         "description": "radv: remove VK_VALVE_descriptor_set_host_mapping",
         "nominated": false,
