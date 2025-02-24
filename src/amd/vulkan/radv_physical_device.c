@@ -171,7 +171,6 @@ radv_physical_device_init_cache_key(struct radv_physical_device *pdev)
    key->split_fma = !!(instance->debug_flags & RADV_DEBUG_SPLIT_FMA);
    key->ssbo_non_uniform = instance->drirc.ssbo_non_uniform;
    key->tex_non_uniform = instance->drirc.tex_non_uniform;
-   key->lower_terminate_to_discard = instance->drirc.lower_terminate_to_discard;
    key->use_llvm = pdev->use_llvm;
    key->use_ngg = pdev->use_ngg;
    key->use_ngg_culling = pdev->use_ngg_culling;
@@ -180,6 +179,7 @@ radv_physical_device_init_cache_key(struct radv_physical_device *pdev)
 static int
 radv_device_get_cache_uuid(struct radv_physical_device *pdev, void *uuid)
 {
+   const struct radv_instance *instance = radv_physical_device_instance(pdev);
    struct mesa_sha1 ctx;
    unsigned char sha1[20];
 
@@ -204,6 +204,9 @@ radv_device_get_cache_uuid(struct radv_physical_device *pdev, void *uuid)
 #endif
 
    _mesa_sha1_update(&ctx, &pdev->cache_key, sizeof(pdev->cache_key));
+   if (instance->drirc.lower_terminate_to_discard)
+      _mesa_sha1_update(&ctx, &instance->drirc.lower_terminate_to_discard,
+                        sizeof(instance->drirc.lower_terminate_to_discard));
    _mesa_sha1_final(&ctx, sha1);
 
    memcpy(uuid, sha1, VK_UUID_SIZE);
